@@ -19,7 +19,7 @@ var valueObj = {
 
 async function sendPostRequest(valueObj){
     try{
-        const response = await axios.post('https://crudcrud.com/api/016d4173bb11419d8e79c561e4f9a75d/candyInfo', valueObj);
+        const response = await axios.post('https://crudcrud.com/api/0da3beaabf19410aa034711cf66c5a34/candyInfo', valueObj);
         showDataOnScreen(response.data);
     }
     catch(err){
@@ -42,7 +42,7 @@ function showDataOnScreen(obj){
     buyButton.onclick = async () => {
         let qtyy = obj.qty - 1;
      try{  if(qtyy>=0){
-            const response = await axios.put(`https://crudcrud.com/api/016d4173bb11419d8e79c561e4f9a75d/candyInfo/${obj._id}`, {
+            const response = await axios.put(`https://crudcrud.com/api/0da3beaabf19410aa034711cf66c5a34/candyInfo/${obj._id}`, {
                 name: obj.name,
                 desc : obj.desc,
                 price : obj.price,
